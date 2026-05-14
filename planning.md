@@ -20,9 +20,40 @@
     - Personal details only is expanded to start.
     - Each section is seeded with mock info to show how it looks. Field are filled and editable.
     - Download PDF button somewhere.
+    - No submit buttons needed on fields. Resume just updates in real time with changes.
   - Right side is preview of resume as you add info. Shares state with left side and updates in realtime. Use real resume example to build structure.
 
 ## What will the project react components be?
+
+- App
+  - Header
+  - ResumeBuilder
+    - PersonalDetailsForm
+      - FormField (name)
+      - FormField (email)
+      - FormField (phone number)
+      - FormField (address)
+    - EducationForm
+      - FormFieldsContainer
+        - FormField (school)
+        - FormField (degree)
+        - DatePicker (start date)
+        - DatePicker (end date)
+        - FormField (location)
+      - AdditionButton (+ education)
+      - DeleteButton (delete education)
+    - ExperienceForm
+      - FormFieldsContainer
+        - FormField (company)
+        - FormField (position or title)
+        - DatePicker (start date)
+        - DatePicker (end date)
+        - FormField (location)
+        - DescriptionField (description)
+      - AdditionButton (+ experience)
+      - DeleteButton (delete experience)
+    - SkillsForm
+  - ResumePreview
 
 ## How do you plan to organize your project files?
 
