@@ -28,12 +28,12 @@
 - App
   - Header
   - ResumeBuilder
-    - PersonalDetailsForm
+    - ResumeBuilderForm (personal details)
       - FormField (name)
       - FormField (email)
       - FormField (phone number)
       - FormField (address)
-    - EducationForm
+    - ResumeBuilderForm (education)
       - FormFieldsContainer
         - FormField (school)
         - FormField (degree)
@@ -42,7 +42,7 @@
         - FormField (location)
       - AdditionButton (+ education)
       - DeleteButton (delete education)
-    - ExperienceForm
+    - ResumeBuilderForm (experience)
       - FormFieldsContainer
         - FormField (company)
         - FormField (position or title)
@@ -52,10 +52,88 @@
         - DescriptionField (description)
       - AdditionButton (+ experience)
       - DeleteButton (delete experience)
-    - SkillsForm
+    - ResumeBuilderForm (skills)
+      - FormFieldsContainer
+        - FormField (skill)
+        - FormField (skill)
+        - FormField (skill)
+      - AdditionButton (+ skill)
+      - DeleteButton (delete skill)
   - ResumePreview
+    - PreviewHeader
+    - ResumeSection (education)
+      - ResumeSectionHeader
+      - ResumeItem (school)
+    - ResumeSection (experience)
+      - ResumeSectionHeader
+      - ResumeItem (experience)
+      - ResumeItem (experience)
+      - ResumeItem (experience)
+    - ResumeSection (skills)
+      - ResumeSectionHeader
+      - SkillsContainer
+        - Skill
+        - Skill
+        - Skill
+        - Skill
+        - Skill
+  - Footer
 
 ## How do you plan to organize your project files?
+
+- src/
+  - main.jsx
+  - App.jsx
+  - App.css
+  - components/
+    - Header/
+      - Header.jsx
+      - Header.css
+    - ResumeBuilder/
+      - Resumebuilder.jsx
+      - Resumebuilder.css
+    - ResumeBuilderForm/
+      - ResumeBuilderForm.jsx
+      - ResumeBuilderForm.css
+    - FormField/
+      - FormField.jsx
+      - FormField.css
+    - FormFieldsContainer/
+      - FormFieldsContainer.jsx
+      - FormFieldsContainer.css
+    - AdditionButton/
+      - AdditionButton.jsx
+      - AdditionButton.css
+    - DeleteButton/
+      - DeleteButton.jsx
+      - DeleteButton.css
+    - DescriptionField/
+      - DescriptionField.jsx
+      - DescriptionField.css
+    - ResumePreview/
+      - ResumePreview.jsx
+      - ResumePreview.css
+    - PreviewHeader/
+      - PreviewHeader.jsx
+      - PreviewHeader.css
+    - ResumeSection/
+      - ResumeSection.jsx
+      - ResumeSection.css
+    - ResumeSectionHeader/
+      - ResumeSectionHeader.jsx
+      - ResumeSectionHeader.css
+    - ResumeItem/
+      - ResumeItem.jsx
+      - ResumeItem.css
+    - SkillsContainer/
+      - SkillsContainer.jsx
+      - SkillsContainer.css
+    - Skill/
+      - Skill.jsx
+      - Skill.css
+    - Footer/
+      - Footer.jsx
+      - Footer.css
 
 ## How do you plan to design the application state?
 
