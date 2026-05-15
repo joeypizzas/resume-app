@@ -137,6 +137,15 @@
 
 ## How do you plan to design the application state?
 
+- One resumeData object created in app that encompasses all of state. It has sub-objects for personal, education, experience, and skills.
+- Setter function initialized in app too.
+- Resume data is passed down as props to both ResumeBuilder and Preview.
+- Setter is invoked when there's a change to field in ResumeBuilder, which updates state and keeps both Builder and Preview in sync.
+- Setter leverages spread operator to use prior state snapshot and then takes only field and value updating, as params, so creates new object with only that change and everything else remains the same from prior state snapshot.
+
 ## What inputs will your program have? Will the user enter data or will you get input from somewhere else?
+
+- Fields in builder. All seeded with information to design the initial resume.
+- User can update fields, which stay in sync with preview.
 
 ## How will you design your UI and link it to application state
