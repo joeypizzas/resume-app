@@ -1,0 +1,11 @@
+/* Header component style */
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  font-size: 2.25rem;
+  background-color: var(--color-navy);
+  color: var(--color-bg);
+}
