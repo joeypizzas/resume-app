@@ -1,0 +1,15 @@
+/* ResumeBuilderForm component css */
+
+.resume-builder-form {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+  border-radius: 5px;
+}
+
+.resume-builder-form-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
