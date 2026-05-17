@@ -137,7 +137,8 @@
 
 ## How do you plan to design the application state?
 
-- One resumeData object created in app that encompasses all of state. It has sub-objects for personal, education, experience, and skills.
+- One resumeData object created in app that encompasses all of state. It has sub-object for personal and then sub-arrays for education, experience, and skills. Each array index value is an object.
+  - Use of arrays is importanf for education, experience and skills, as enables removing and adding items easily. State then removes or adds the corresponding component from the DOM in the next snapshot using array map method.
 - Setter function initialized in app too.
 - Resume data is passed down as props to both ResumeBuilder and Preview.
 - Setter is invoked when there's a change to field in ResumeBuilder, which updates state and keeps both Builder and Preview in sync.
@@ -149,3 +150,7 @@
 - User can update fields, which stay in sync with preview.
 
 ## How will you design your UI and link it to application state
+
+- Build app component by component in JSX. Initially with entirely hardcoded values.
+- Once component is built with hardcoded values, then pass down hardcoded props.
+- Once all components are built with hardcoded props, then refactor to add in state.
