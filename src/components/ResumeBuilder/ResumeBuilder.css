@@ -1,1 +1,7 @@
 /* ResumeBuilder component style */
+
+.resume-builder {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
