@@ -27,56 +27,57 @@
 
 - App
   - Header
-  - ResumeBuilder
-    - ResumeBuilderForm (personal details)
-      - FormField (name)
-      - FormField (email)
-      - FormField (phone number)
-      - FormField (address)
-    - ResumeBuilderForm (education)
-      - FormFieldsContainer
-        - FormField (school)
-        - FormField (degree)
-        - DatePicker (start date)
-        - DatePicker (end date)
-        - FormField (location)
-      - AdditionButton (+ education)
-      - DeleteButton (delete education)
-    - ResumeBuilderForm (experience)
-      - FormFieldsContainer
-        - FormField (company)
-        - FormField (position or title)
-        - DatePicker (start date)
-        - DatePicker (end date)
-        - FormField (location)
-        - DescriptionField (description)
-      - AdditionButton (+ experience)
-      - DeleteButton (delete experience)
-    - ResumeBuilderForm (skills)
-      - FormFieldsContainer
-        - FormField (skill)
-        - FormField (skill)
-        - FormField (skill)
-      - AdditionButton (+ skill)
-      - DeleteButton (delete skill)
-  - ResumePreview
-    - PreviewHeader
-    - ResumeSection (education)
-      - ResumeSectionHeader
-      - ResumeItem (school)
-    - ResumeSection (experience)
-      - ResumeSectionHeader
-      - ResumeItem (experience)
-      - ResumeItem (experience)
-      - ResumeItem (experience)
-    - ResumeSection (skills)
-      - ResumeSectionHeader
-      - SkillsContainer
-        - Skill
-        - Skill
-        - Skill
-        - Skill
-        - Skill
+  - ResumeContainer
+    - ResumeBuilder
+      - ResumeBuilderForm (personal details)
+        - FormField (name)
+        - FormField (email)
+        - FormField (phone number)
+        - FormField (address)
+      - ResumeBuilderForm (education)
+        - FormFieldsContainer
+          - FormField (school)
+          - FormField (degree)
+          - DatePicker (start date)
+          - DatePicker (end date)
+          - FormField (location)
+        - AdditionButton (+ education)
+        - DeleteButton (delete education)
+      - ResumeBuilderForm (experience)
+        - FormFieldsContainer
+          - FormField (company)
+          - FormField (position or title)
+          - DatePicker (start date)
+          - DatePicker (end date)
+          - FormField (location)
+          - DescriptionField (description)
+        - AdditionButton (+ experience)
+        - DeleteButton (delete experience)
+      - ResumeBuilderForm (skills)
+        - FormFieldsContainer
+          - FormField (skill)
+          - FormField (skill)
+          - FormField (skill)
+        - AdditionButton (+ skill)
+        - DeleteButton (delete skill)
+    - ResumePreview
+      - PreviewHeader
+      - ResumeSection (education)
+        - ResumeSectionHeader
+        - ResumeItem (school)
+      - ResumeSection (experience)
+        - ResumeSectionHeader
+        - ResumeItem (experience)
+        - ResumeItem (experience)
+        - ResumeItem (experience)
+      - ResumeSection (skills)
+        - ResumeSectionHeader
+        - SkillsContainer
+          - Skill
+          - Skill
+          - Skill
+          - Skill
+          - Skill
   - Footer
 
 ## How do you plan to organize your project files?
@@ -89,6 +90,9 @@
     - Header/
       - Header.jsx
       - Header.css
+    - ResumeContainer/
+      - ResumeContainer.jsx
+      - ResumeContainer.css
     - ResumeBuilder/
       - Resumebuilder.jsx
       - Resumebuilder.css
