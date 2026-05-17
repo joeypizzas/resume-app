@@ -1,0 +1,6 @@
+/* ResumeContainer component style */
+
+.resumeContainer {
+  display: flex;
+  flex: 1;
+}
