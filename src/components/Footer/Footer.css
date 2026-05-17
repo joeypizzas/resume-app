@@ -1,0 +1,22 @@
+/* Footer component css */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: var(--color-navy);
+}
+
+.footer-text {
+  color: var(--color-bg);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-bg);
+}
+
+a:hover {
+  color: var(--color-blue);
+}
