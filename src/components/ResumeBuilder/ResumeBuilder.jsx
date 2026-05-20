@@ -3,6 +3,7 @@
 import "./ResumeBuilder.css";
 import { ResumeBuilderForm } from "../ResumeBuilderForm/ResumeBuilderForm.jsx";
 import { FormField } from "../FormField/FormField.jsx";
+import { FormFieldsContainer } from "../FormFieldsContainer/FormFieldsContainer.jsx";
 
 export function ResumeBuilder() {
   return (
@@ -20,6 +21,21 @@ export function ResumeBuilder() {
         <FormField
           fieldHeader="Location"
           initialInput="New York, NY"
+        ></FormField>
+      </ResumeBuilderForm>
+      <ResumeBuilderForm header="Education">
+        <FormField
+          fieldHeader="School"
+          initialInput="University of Michigan"
+        ></FormField>
+        <FormField
+          fieldHeader="Degree"
+          initialInput="BA, Cognitive science and philosophy"
+        ></FormField>
+        {/* Add date picker */}
+        <FormField
+          fieldHeader="Location"
+          initialInput="Ann Arbor, MI"
         ></FormField>
       </ResumeBuilderForm>
     </div>
