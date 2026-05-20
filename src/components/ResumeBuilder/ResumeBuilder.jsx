@@ -24,19 +24,21 @@ export function ResumeBuilder() {
         ></FormField>
       </ResumeBuilderForm>
       <ResumeBuilderForm header="Education">
-        <FormField
-          fieldHeader="School"
-          initialInput="University of Michigan"
-        ></FormField>
-        <FormField
-          fieldHeader="Degree"
-          initialInput="BA, Cognitive science and philosophy"
-        ></FormField>
-        {/* Add date picker */}
-        <FormField
-          fieldHeader="Location"
-          initialInput="Ann Arbor, MI"
-        ></FormField>
+        <FormFieldsContainer>
+          <FormField
+            fieldHeader="School"
+            initialInput="University of Michigan"
+          ></FormField>
+          <FormField
+            fieldHeader="Degree"
+            initialInput="BA, Cognitive science and philosophy"
+          ></FormField>
+          {/* Add date picker */}
+          <FormField
+            fieldHeader="Location"
+            initialInput="Ann Arbor, MI"
+          ></FormField>
+        </FormFieldsContainer>
       </ResumeBuilderForm>
     </div>
   );
