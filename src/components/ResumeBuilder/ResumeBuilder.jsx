@@ -4,6 +4,7 @@ import "./ResumeBuilder.css";
 import { ResumeBuilderForm } from "../ResumeBuilderForm/ResumeBuilderForm.jsx";
 import { FormField } from "../FormField/FormField.jsx";
 import { FormFieldsContainer } from "../FormFieldsContainer/FormFieldsContainer.jsx";
+import { DatePickerField } from "../DatePicker/DatePicker.jsx";
 
 export function ResumeBuilder() {
   return (
@@ -33,7 +34,14 @@ export function ResumeBuilder() {
             fieldHeader="Degree"
             initialInput="BA, Cognitive science and philosophy"
           ></FormField>
-          {/* Add date picker */}
+          <DatePickerField
+            fieldHeader="Start date"
+            initialDate="2015-10"
+          ></DatePickerField>
+          <DatePickerField
+            fieldHeader="End date"
+            initialDate="2019-06"
+          ></DatePickerField>
           <FormField
             fieldHeader="Location"
             initialInput="Ann Arbor, MI"
