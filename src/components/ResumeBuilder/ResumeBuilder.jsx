@@ -5,6 +5,7 @@ import { ResumeBuilderForm } from "../ResumeBuilderForm/ResumeBuilderForm.jsx";
 import { FormField } from "../FormField/FormField.jsx";
 import { FormFieldsContainer } from "../FormFieldsContainer/FormFieldsContainer.jsx";
 import { DatePickerField } from "../DatePicker/DatePicker.jsx";
+import { DescriptionField } from "../DescriptionField/DescriptionField.jsx";
 
 export function ResumeBuilder() {
   return (
@@ -46,6 +47,10 @@ export function ResumeBuilder() {
             fieldHeader="Location"
             initialInput="Ann Arbor, MI"
           ></FormField>
+          <DescriptionField
+            fieldHeader="Description"
+            initialInput="University Honors (2018-2019)"
+          ></DescriptionField>
         </FormFieldsContainer>
       </ResumeBuilderForm>
     </div>
