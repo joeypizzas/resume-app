@@ -6,6 +6,7 @@ import { FormField } from "../FormField/FormField.jsx";
 import { FormFieldsContainer } from "../FormFieldsContainer/FormFieldsContainer.jsx";
 import { DatePickerField } from "../DatePicker/DatePicker.jsx";
 import { DescriptionField } from "../DescriptionField/DescriptionField.jsx";
+import { ButtonContainer } from "../ButtonContainer/ButtonContainer.jsx";
 
 export function ResumeBuilder() {
   return (
@@ -52,6 +53,7 @@ export function ResumeBuilder() {
             initialInput="University Honors (2018-2019)"
           ></DescriptionField>
         </FormFieldsContainer>
+        <ButtonContainer></ButtonContainer>
       </ResumeBuilderForm>
     </div>
   );
