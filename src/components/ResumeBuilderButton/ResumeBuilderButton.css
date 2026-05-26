@@ -1,1 +1,17 @@
 /* ResumeBuilderButton component style */
+
+.resume-builder-button {
+  padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+  border-radius: 3px;
+  border: 1px solid var(--color-navy);
+  background-color: var(--color-border);
+  color: var(--color-ink);
+}
+
+.resume-builder-button:hover {
+  background-color: var(--color-blue-tint);
+}
+
+.resume-builder-button:active {
+  background-color: var(--color-teal);
+}

@@ -2,4 +2,10 @@
 
 import "./ResumeBuilderButton.css";
 
-export function ResumeBuilderButton() {}
+export function ResumeBuilderButton({ label, onClick }) {
+  return (
+    <button className="resume-builder-button" onClick={onClick}>
+      {label}
+    </button>
+  );
+}
