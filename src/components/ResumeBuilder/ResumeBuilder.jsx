@@ -35,7 +35,7 @@ export function ResumeBuilder() {
           ></FormField>
           <FormField
             fieldHeader="Degree"
-            initialInput="BA, Cognitive science and philosophy"
+            initialInput="BS, Electrical engineering and computer science"
           ></FormField>
           <DatePickerField
             fieldHeader="Start date"
@@ -52,6 +52,44 @@ export function ResumeBuilder() {
           <DescriptionField
             fieldHeader="Description"
             initialInput="University Honors (2018-2019)"
+          ></DescriptionField>
+        </FormFieldsContainer>
+        <ButtonContainer>
+          <ResumeBuilderButton
+            label="Add +"
+            onClick={() => console.log("Clicked")}
+          ></ResumeBuilderButton>
+          <ResumeBuilderButton
+            label="Remove -"
+            onClick={() => console.log("Clicked")}
+          ></ResumeBuilderButton>
+        </ButtonContainer>
+      </ResumeBuilderForm>
+      <ResumeBuilderForm header="Experience">
+        <FormFieldsContainer>
+          <FormField
+            fieldHeader="Company"
+            initialInput="Joey's Pizza Pies"
+          ></FormField>
+          <FormField
+            fieldHeader="Position"
+            initialInput="Head pie guy"
+          ></FormField>
+          <DatePickerField
+            fieldHeader="Start date"
+            initialDate="2019-09"
+          ></DatePickerField>
+          <DatePickerField
+            fieldHeader="End date"
+            initialDate="2026-05"
+          ></DatePickerField>
+          <FormField
+            fieldHeader="Location"
+            initialInput="New York, NY"
+          ></FormField>
+          <DescriptionField
+            fieldHeader="Description"
+            initialInput="Directly responsible for the creation of hundreds of delicious pizza pies each day."
           ></DescriptionField>
         </FormFieldsContainer>
         <ButtonContainer>
