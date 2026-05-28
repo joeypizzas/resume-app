@@ -103,6 +103,32 @@ export function ResumeBuilder() {
           ></ResumeBuilderButton>
         </ButtonContainer>
       </ResumeBuilderForm>
+      <ResumeBuilderForm header="Skills">
+        <FormFieldsContainer>
+          <FormField
+            fieldHeader="Skill"
+            initialInput="Kneading dough"
+          ></FormField>
+          <FormField
+            fieldHeader="Skill"
+            initialInput="Tossin' pies"
+          ></FormField>
+          <FormField
+            fieldHeader="Skill"
+            initialInput="Operating pizza oven"
+          ></FormField>
+        </FormFieldsContainer>
+        <ButtonContainer>
+          <ResumeBuilderButton
+            label="Add +"
+            onClick={() => console.log("Clicked")}
+          ></ResumeBuilderButton>
+          <ResumeBuilderButton
+            label="Remove -"
+            onClick={() => console.log("Clicked")}
+          ></ResumeBuilderButton>
+        </ButtonContainer>
+      </ResumeBuilderForm>
     </div>
   );
 }
