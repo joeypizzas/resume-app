@@ -12,11 +12,18 @@
   color: var(--color-ink);
 }
 
+.date-picker-wrapper {
+  display: block;
+}
+
 .date-picker-field {
   color: var(--color-ink);
-  padding: 0.5rem 5rem 0.5rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 5px;
-  border: 1px;
+  border: none;
   font-weight: 500;
   background-color: var(--color-border);
+  width: 100%;
+  font-size: 0.85rem;
+  box-sizing: border-box;
 }

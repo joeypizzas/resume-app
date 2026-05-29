@@ -10,6 +10,7 @@ export function DatePickerField({ fieldHeader, initialDate }) {
       <div className="field-header">{fieldHeader}</div>
       <MonthYearPicker
         className="date-picker-field"
+        wrapperClassName="date-picker-wrapper"
         selected={initialDate}
         dateFormat="MM/yyyy"
         showMonthYearPicker
