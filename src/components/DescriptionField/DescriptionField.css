@@ -19,4 +19,5 @@
   border: 1px;
   font-weight: 500;
   background-color: var(--color-border);
+  font-size: 0.85rem;
 }
