@@ -158,3 +158,9 @@
 - Build app component by component in JSX. Initially with entirely hardcoded values.
 - Once component is built with hardcoded values, then pass down hardcoded props.
 - Once all components are built with hardcoded props, then refactor to add in state.
+
+## Items to cleanup
+
+- Make resume builder sections collapsable
+- Add dividers between sections when there are multiple educations, etc.
+- Update favicon
