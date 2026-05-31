@@ -1,0 +1,9 @@
+/* ResumePreview component style */
+
+.resume-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--color-border);
+  overflow-y: auto;
+}
