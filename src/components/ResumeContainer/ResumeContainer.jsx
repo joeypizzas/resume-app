@@ -2,13 +2,13 @@
 
 import "./ResumeContainer.css";
 import { ResumeBuilder } from "../ResumeBuilder/ResumeBuilder.jsx";
-import { ResumePreview } from "../ResumePreview/ResumePreview.jsx";
+import { ResumePreviewContainer } from "../ResumePreviewContainer/ResumePreviewContainer.jsx";
 
 export function ResumeContainer() {
   return (
     <div className="resume-container">
       <ResumeBuilder></ResumeBuilder>
-      <ResumePreview></ResumePreview>
+      <ResumePreviewContainer></ResumePreviewContainer>
     </div>
   );
 }
