@@ -3,7 +3,7 @@
 .resume-preview {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   background-color: var(--preview-bg);
   padding: 1.5rem;
   color: var(--preview-black);

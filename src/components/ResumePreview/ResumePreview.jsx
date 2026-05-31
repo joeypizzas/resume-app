@@ -2,6 +2,7 @@
 
 import "./ResumePreview.css";
 import { PreviewHeader } from "../PreviewHeader/PreviewHeader.jsx";
+import { PreviewSection } from "../PreviewSection/PreviewSection.jsx";
 
 export function ResumePreview() {
   return (
@@ -12,6 +13,7 @@ export function ResumePreview() {
         phone="1234567890"
         email="joey@pizzas.com"
       ></PreviewHeader>
+      <PreviewSection sectionName="SKILLS"></PreviewSection>
     </div>
   );
 }
