@@ -1,0 +1,5 @@
+/* Skill component style */
+
+.skill {
+  border-right: 1px solid var(--preview-black);
+}
