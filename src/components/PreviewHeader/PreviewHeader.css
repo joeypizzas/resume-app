@@ -1,0 +1,21 @@
+/* PreviewHeader component style */
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--preview-black);
+}
+
+.preview-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  align-self: start;
+}
+
+.preview-phone-email {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
