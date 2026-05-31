@@ -1,0 +1,30 @@
+/* PreviewItem component style */
+
+.preview-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.organization-location-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.organization-location {
+  display: flex;
+}
+
+.organization {
+}
+
+.location {
+}
+
+.date {
+}
+
+.position-or-study {
+}
+
+.description {
+}
