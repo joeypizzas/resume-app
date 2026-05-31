@@ -1,0 +1,11 @@
+/* PreviewSection component style */
+
+.preview-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
