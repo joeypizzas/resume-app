@@ -4,6 +4,7 @@ import "./ResumePreview.css";
 import { PreviewHeader } from "../PreviewHeader/PreviewHeader.jsx";
 import { PreviewSection } from "../PreviewSection/PreviewSection.jsx";
 import { SkillsContainer } from "../SkillsContainer/SkillsContainer.jsx";
+import { Skill } from "../Skill/Skill.jsx";
 
 export function ResumePreview() {
   return (
@@ -15,7 +16,11 @@ export function ResumePreview() {
         email="joey@pizzas.com"
       ></PreviewHeader>
       <PreviewSection sectionName="SKILLS">
-        <SkillsContainer></SkillsContainer>
+        <SkillsContainer>
+          <Skill skillName="Kneading dough"></Skill>
+          <Skill skillName="Tossin' Pies"></Skill>
+          <Skill skillName="Operating pizza oven"></Skill>
+        </SkillsContainer>
       </PreviewSection>
     </div>
   );
