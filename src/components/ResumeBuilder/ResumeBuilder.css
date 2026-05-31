@@ -7,4 +7,5 @@
   padding: 4rem 6rem 4rem 6rem;
   background-color: var(--color-border);
   overflow-y: auto;
+  width: 25%;
 }
