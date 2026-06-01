@@ -33,6 +33,19 @@ export function ResumePreview() {
           description="- Directly responsible for the creation of hundreds of delicious pizza pies each day."
         ></PreviewItem>
       </PreviewSection>
+      <PreviewSection sectionName="EDUCATION">
+        <PreviewItem
+          organization="International Academy of Pizza Pies,"
+          location="Naples, IT"
+          startDate="09/2015"
+          endDate="05/2019"
+          positionOrStudy="BS, Pizza Pie Sciences"
+          description="
+            - Golden hands winner in tossin' pies competition (2019)
+            - Pepperoni crown holder (2018)
+            - University Honors (2018-2019)"
+        ></PreviewItem>
+      </PreviewSection>
     </div>
   );
 }
