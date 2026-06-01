@@ -22,7 +22,14 @@ export function PreviewItem({
         </div>
       </div>
       <div className="position-or-study">{positionOrStudy}</div>
-      <div className="description">{description}</div>
+      <div className="description">
+        {description?.includes("\n")
+          ? description
+              .split("\n")
+              .filter((line) => line.trim())
+              .map((line, i) => <div key={i}>{line.trim()}</div>)
+          : description}
+      </div>
     </div>
   );
 }
