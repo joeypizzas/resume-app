@@ -5,6 +5,8 @@
   flex-direction: column;
   gap: 1.5rem;
   background-color: var(--preview-bg);
-  padding: 1.5rem;
   color: var(--preview-black);
+  width: 816px; /* 8.5in at 96dpi */
+  min-height: 1056px; /* 11in at 96dpi */
+  padding: 96px; /* ~1in margins */
 }
