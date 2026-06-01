@@ -25,12 +25,12 @@ export function ResumePreview() {
       </PreviewSection>
       <PreviewSection sectionName="EXPERIENCE">
         <PreviewItem
-          organization="Joey's Pizza Pies"
+          organization="Joey's Pizza Pies,"
           location="New York, NY"
           startDate="08/2019"
           endDate=" 04/2026"
           positionOrStudy="Head pie guy"
-          description="Directly responsible for the creation of hundreds of delicious pizza pies each day."
+          description="- Directly responsible for the creation of hundreds of delicious pizza pies each day."
         ></PreviewItem>
       </PreviewSection>
     </div>
