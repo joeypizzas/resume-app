@@ -31,11 +31,11 @@ export function ResumeBuilder() {
         <FormFieldsContainer>
           <FormField
             fieldHeader="School"
-            initialInput="University of Michigan"
+            initialInput="International Academy of Pizza Pies"
           ></FormField>
           <FormField
             fieldHeader="Degree"
-            initialInput="BS, Electrical engineering and computer science"
+            initialInput="BS, Pizza Pie Sciences"
           ></FormField>
           <DatePickerField
             fieldHeader="Start date"
@@ -47,11 +47,14 @@ export function ResumeBuilder() {
           ></DatePickerField>
           <FormField
             fieldHeader="Location"
-            initialInput="Ann Arbor, MI"
+            initialInput="Naples, IT"
           ></FormField>
           <DescriptionField
             fieldHeader="Description"
-            initialInput="University Honors (2018-2019)"
+            initialInput="
+            - Golden hands winner in tossin' pies competition (2019)
+            - Pepperoni crown holder (2018)
+            - University Honors (2018-2019)"
           ></DescriptionField>
         </FormFieldsContainer>
         <ButtonContainer>
