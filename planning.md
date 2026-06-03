@@ -165,3 +165,4 @@
 - Add dividers between sections when there are multiple educations, etc.
 - Update favicon
 - responsiveness media queries
+- Add option to download docx
