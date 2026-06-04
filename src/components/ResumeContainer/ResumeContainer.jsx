@@ -44,6 +44,20 @@ export function ResumeContainer() {
     ],
   });
 
+  const updatePersonal = (field, value) =>
+    setResumeData((prev) => ({
+      ...prev,
+      personal: { ...prev.personal, [field]: value },
+    }));
+
+  const updateEducation = (id, field, value) =>
+    setResumeData((prev) => ({
+      ...prev,
+      education: prev.education.map((edu) =>
+        edu.id === id ? { ...edu, [field]: value } : edu,
+      ),
+    }));
+
   return (
     <div className="resume-container">
       <ResumeBuilder></ResumeBuilder>
