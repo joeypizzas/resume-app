@@ -58,6 +58,22 @@ export function ResumeContainer() {
       ),
     }));
 
+  const updateExperience = (id, field, value) =>
+    setResumeData((prev) => ({
+      ...prev,
+      experience: prev.experience.map((exp) =>
+        exp.id === id ? { ...exp, [field]: value } : exp,
+      ),
+    }));
+
+  const updateSkill = (id, field, value) =>
+    setResumeData((prev) => ({
+      ...prev,
+      skills: prev.skills.map((s) =>
+        s.id === id ? { ...s, [field]: value } : s,
+      ),
+    }));
+
   return (
     <div className="resume-container">
       <ResumeBuilder></ResumeBuilder>
