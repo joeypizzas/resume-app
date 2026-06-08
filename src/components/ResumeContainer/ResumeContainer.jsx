@@ -76,8 +76,14 @@ export function ResumeContainer() {
 
   return (
     <div className="resume-container">
-      <ResumeBuilder></ResumeBuilder>
-      <ResumePreviewContainer></ResumePreviewContainer>
+      <ResumeBuilder
+        resumeData={resumeData}
+        onUpdatePersonal={updatePersonal}
+        onUpdateEducation={updateEducation}
+        onUpdateExperience={updateExperience}
+        onUpdateSkills={updateSkill}
+      ></ResumeBuilder>
+      <ResumePreviewContainer resumeData={resumeData}></ResumePreviewContainer>
     </div>
   );
 }
