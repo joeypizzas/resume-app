@@ -9,11 +9,26 @@ import { DescriptionField } from "../DescriptionField/DescriptionField.jsx";
 import { ButtonContainer } from "../ButtonContainer/ButtonContainer.jsx";
 import { ResumeBuilderButton } from "../ResumeBuilderButton/ResumeBuilderButton.jsx";
 
-export function ResumeBuilder() {
+export function ResumeBuilder({
+  resumeData,
+  onUpdatePersonal,
+  onUpdateEducation,
+  onUpdateExperience,
+  onUpdateSkill,
+}) {
   return (
     <div className="resume-builder">
       <ResumeBuilderForm header="Personal details">
-        <FormField fieldHeader="Name" initialInput="Joey Pizzas"></FormField>
+        <FormField
+          fieldHeader={Object.keys(resumeData.personal)[0]}
+          value={resumeData.personal.name}
+          onChange={(e) =>
+            onUpdatePersonal(
+              Object.keys(resumeData.personal)[0],
+              e.target.value,
+            )
+          }
+        ></FormField>
         <FormField
           fieldHeader="Email"
           initialInput="joey@pizzas.com"
