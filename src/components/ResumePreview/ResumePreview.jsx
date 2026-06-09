@@ -7,14 +7,14 @@ import { SkillsContainer } from "../SkillsContainer/SkillsContainer.jsx";
 import { Skill } from "../Skill/Skill.jsx";
 import { PreviewItem } from "../PreviewItem/PreviewItem.jsx";
 
-export function ResumePreview() {
+export function ResumePreview({ resumeData }) {
   return (
     <div className="resume-preview">
       <PreviewHeader
-        location="New York, NY"
-        name="Joey Pizzas"
-        phone="1234567890"
-        email="joey@pizzas.com"
+        location={resumeData.personal.location}
+        name={resumeData.personal.name}
+        phone={resumeData.personal.phone}
+        email={resumeData.personal.email}
       ></PreviewHeader>
       <PreviewSection sectionName="SKILLS">
         <SkillsContainer>
