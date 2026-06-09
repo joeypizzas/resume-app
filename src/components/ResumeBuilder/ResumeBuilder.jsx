@@ -9,6 +9,10 @@ import { DescriptionField } from "../DescriptionField/DescriptionField.jsx";
 import { ButtonContainer } from "../ButtonContainer/ButtonContainer.jsx";
 import { ResumeBuilderButton } from "../ResumeBuilderButton/ResumeBuilderButton.jsx";
 
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 export function ResumeBuilder({
   resumeData,
   onUpdatePersonal,
@@ -20,7 +24,7 @@ export function ResumeBuilder({
     <div className="resume-builder">
       <ResumeBuilderForm header="Personal details">
         <FormField
-          fieldHeader={Object.keys(resumeData.personal)[0]}
+          fieldHeader={capitalize(Object.keys(resumeData.personal)[0])}
           value={resumeData.personal.name}
           onChange={(e) =>
             onUpdatePersonal(
@@ -30,7 +34,7 @@ export function ResumeBuilder({
           }
         ></FormField>
         <FormField
-          fieldHeader={Object.keys(resumeData.personal)[1]}
+          fieldHeader={capitalize(Object.keys(resumeData.personal)[1])}
           value={resumeData.personal.email}
           onChange={(e) =>
             onUpdatePersonal(
@@ -40,7 +44,7 @@ export function ResumeBuilder({
           }
         ></FormField>
         <FormField
-          fieldHeader={Object.keys(resumeData.personal)[2]}
+          fieldHeader={capitalize(Object.keys(resumeData.personal)[2])}
           value={resumeData.personal.phone}
           onChange={(e) =>
             onUpdatePersonal(
@@ -50,7 +54,7 @@ export function ResumeBuilder({
           }
         ></FormField>
         <FormField
-          fieldHeader={Object.keys(resumeData.personal)[3]}
+          fieldHeader={capitalize(Object.keys(resumeData.personal)[3])}
           value={resumeData.personal.location}
           onChange={(e) =>
             onUpdatePersonal(
