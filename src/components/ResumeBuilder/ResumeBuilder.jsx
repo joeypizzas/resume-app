@@ -30,16 +30,34 @@ export function ResumeBuilder({
           }
         ></FormField>
         <FormField
-          fieldHeader="Email"
-          initialInput="joey@pizzas.com"
+          fieldHeader={Object.keys(resumeData.personal)[1]}
+          value={resumeData.personal.email}
+          onChange={(e) =>
+            onUpdatePersonal(
+              Object.keys(resumeData.personal)[1],
+              e.target.value,
+            )
+          }
         ></FormField>
         <FormField
-          fieldHeader="Phone number"
-          initialInput="1234567890"
+          fieldHeader={Object.keys(resumeData.personal)[2]}
+          value={resumeData.personal.phone}
+          onChange={(e) =>
+            onUpdatePersonal(
+              Object.keys(resumeData.personal)[2],
+              e.target.value,
+            )
+          }
         ></FormField>
         <FormField
-          fieldHeader="Location"
-          initialInput="New York, NY"
+          fieldHeader={Object.keys(resumeData.personal)[3]}
+          value={resumeData.personal.location}
+          onChange={(e) =>
+            onUpdatePersonal(
+              Object.keys(resumeData.personal)[3],
+              e.target.value,
+            )
+          }
         ></FormField>
       </ResumeBuilderForm>
       <ResumeBuilderForm header="Education">
