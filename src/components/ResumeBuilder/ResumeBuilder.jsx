@@ -8,9 +8,27 @@ import { DatePickerField } from "../DatePicker/DatePicker.jsx";
 import { DescriptionField } from "../DescriptionField/DescriptionField.jsx";
 import { ButtonContainer } from "../ButtonContainer/ButtonContainer.jsx";
 import { ResumeBuilderButton } from "../ResumeBuilderButton/ResumeBuilderButton.jsx";
+import { parse, format } from "date-fns";
 
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function capitalizeAndSplit(str) {
+  const arr = [...str];
+  let newStr = "";
+  for (const c of arr) {
+    if (arr.indexOf(c) === 0) newStr += capitalize(c);
+    // finish fn
+  }
+}
+
+function parseDate(str) {
+  return str ? parse(str, "MM/yyyy", new Date()) : null;
+}
+
+function formatDate(date) {
+  return date ? format(date, "MM/yyyy") : "";
 }
 
 export function ResumeBuilder({
@@ -81,18 +99,18 @@ export function ResumeBuilder({
                 onUpdateEducation(edu.id, Object.keys(edu)[2], e.target.value)
               }
             ></FormField>
-            <DatePickerField // troubleshoot
+            <DatePickerField
               fieldHeader={capitalize(Object.keys(edu)[3])}
-              value={edu.startDate}
-              onChange={(e) =>
-                onUpdateEducation(edu.id, Object.keys(edu)[3], e.target.value)
+              selected={parseDate(edu.startDate)}
+              onChange={(date) =>
+                onUpdateEducation(edu.id, Object.keys(edu)[3], formatDate(date))
               }
             ></DatePickerField>
-            <DatePickerField // troubleshoot
+            <DatePickerField
               fieldHeader={capitalize(Object.keys(edu)[4])}
-              value={edu.endDate}
-              onChange={(e) =>
-                onUpdateEducation(edu.id, Object.keys(edu)[4], e.target.value)
+              selected={parseDate(edu.endDate)}
+              onChange={(date) =>
+                onUpdateEducation(edu.id, Object.keys(edu)[4], formatDate(date))
               }
             ></DatePickerField>
             <FormField
@@ -102,7 +120,7 @@ export function ResumeBuilder({
                 onUpdateEducation(edu.id, Object.keys(edu)[5], e.target.value)
               }
             ></FormField>
-            <DescriptionField // troubleshoot
+            <DescriptionField
               fieldHeader={capitalize(Object.keys(edu)[6])}
               value={edu.description}
               onChange={(e) =>
