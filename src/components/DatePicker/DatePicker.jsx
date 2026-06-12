@@ -4,14 +4,15 @@ import "./DatePicker.css";
 import MonthYearPicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-export function DatePickerField({ fieldHeader, initialDate }) {
+export function DatePickerField({ fieldHeader, selected, onChange }) {
   return (
     <div className="field-container">
       <div className="field-header">{fieldHeader}</div>
       <MonthYearPicker
         className="date-picker-field"
         wrapperClassName="date-picker-wrapper"
-        selected={initialDate}
+        selected={selected}
+        onChange={onChange}
         dateFormat="MM/yyyy"
         showMonthYearPicker
       ></MonthYearPicker>

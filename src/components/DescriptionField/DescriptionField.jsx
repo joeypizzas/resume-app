@@ -2,13 +2,14 @@
 
 import "./DescriptionField.css";
 
-export function DescriptionField({ fieldHeader, initialInput }) {
+export function DescriptionField({ fieldHeader, value, onChange }) {
   return (
     <div className="field-container">
       <div className="field-header">{fieldHeader}</div>
       <textarea
         className="description-field"
-        defaultValue={initialInput}
+        value={value}
+        onChange={onChange}
       ></textarea>
     </div>
   );
