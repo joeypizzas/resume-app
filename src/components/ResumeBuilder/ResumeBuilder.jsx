@@ -65,35 +65,52 @@ export function ResumeBuilder({
         ></FormField>
       </ResumeBuilderForm>
       <ResumeBuilderForm header="Education">
-        <FormFieldsContainer>
-          <FormField
-            fieldHeader="School"
-            initialInput="International Academy of Pizza Pies"
-          ></FormField>
-          <FormField
-            fieldHeader="Degree"
-            initialInput="BS, Pizza Pie Sciences"
-          ></FormField>
-          <DatePickerField
-            fieldHeader="Start date"
-            initialDate="2015-10"
-          ></DatePickerField>
-          <DatePickerField
-            fieldHeader="End date"
-            initialDate="2019-06"
-          ></DatePickerField>
-          <FormField
-            fieldHeader="Location"
-            initialInput="Naples, IT"
-          ></FormField>
-          <DescriptionField
-            fieldHeader="Description"
-            initialInput="
-            - Golden hands winner in tossin' pies competition (2019)
-            - Pepperoni crown holder (2018)
-            - University Honors (2018-2019)"
-          ></DescriptionField>
-        </FormFieldsContainer>
+        {resumeData.education.map((edu) => (
+          <FormFieldsContainer key={edu.id}>
+            <FormField
+              fieldHeader={capitalize(Object.keys(edu)[1])}
+              value={edu.school}
+              onChange={(e) =>
+                onUpdateEducation(edu.id, Object.keys(edu)[1], e.target.value)
+              }
+            ></FormField>
+            <FormField
+              fieldHeader={capitalize(Object.keys(edu)[2])}
+              value={edu.degree}
+              onChange={(e) =>
+                onUpdateEducation(edu.id, Object.keys(edu)[2], e.target.value)
+              }
+            ></FormField>
+            <DatePickerField // troubleshoot
+              fieldHeader={capitalize(Object.keys(edu)[3])}
+              value={edu.startDate}
+              onChange={(e) =>
+                onUpdateEducation(edu.id, Object.keys(edu)[3], e.target.value)
+              }
+            ></DatePickerField>
+            <DatePickerField // troubleshoot
+              fieldHeader={capitalize(Object.keys(edu)[4])}
+              value={edu.endDate}
+              onChange={(e) =>
+                onUpdateEducation(edu.id, Object.keys(edu)[4], e.target.value)
+              }
+            ></DatePickerField>
+            <FormField
+              fieldHeader={capitalize(Object.keys(edu)[5])}
+              value={edu.location}
+              onChange={(e) =>
+                onUpdateEducation(edu.id, Object.keys(edu)[5], e.target.value)
+              }
+            ></FormField>
+            <DescriptionField // troubleshoot
+              fieldHeader={capitalize(Object.keys(edu)[6])}
+              value={edu.description}
+              onChange={(e) =>
+                onUpdateEducation(edu.id, Object.keys(edu)[6], e.target.value)
+              }
+            ></DescriptionField>
+          </FormFieldsContainer>
+        ))}
         <ButtonContainer>
           <ResumeBuilderButton
             label="Add +"
