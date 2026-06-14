@@ -21,8 +21,11 @@ export function ResumeContainer() {
         startDate: "09/2015",
         endDate: "05/2019",
         location: "Naples, IT",
-        description:
-          "- Golden hands winner in tossin' pies competition (2019) - Pepperoni crown holder (2018) - University Honors (2018-2019)",
+        description: [
+          "- Golden hands winner in tossin' pies competition (2019)",
+          "- Pepperoni crown holder (2018)",
+          "- University Honors (2018-2019)",
+        ],
       },
     ],
     experience: [
