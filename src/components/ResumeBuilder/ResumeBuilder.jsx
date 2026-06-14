@@ -32,6 +32,12 @@ export function ResumeBuilder({
   onUpdateEducation,
   onUpdateExperience,
   onUpdateSkill,
+  addEducation,
+  removeEducation,
+  addExperience,
+  removeExperience,
+  addSkill,
+  removeSkill,
 }) {
   return (
     <div className="resume-builder">
@@ -126,16 +132,18 @@ export function ResumeBuilder({
                 )
               }
             ></DescriptionField>
+            {resumeData.education.indexOf(edu) > 0 && (
+              <ResumeBuilderButton
+                label="Remove -"
+                onClick={() => removeEducation(edu.id)}
+              ></ResumeBuilderButton>
+            )}
           </FormFieldsContainer>
         ))}
         <ButtonContainer>
           <ResumeBuilderButton
             label="Add +"
-            onClick={() => console.log("Clicked")}
-          ></ResumeBuilderButton>
-          <ResumeBuilderButton
-            label="Remove -"
-            onClick={() => console.log("Clicked")}
+            onClick={addEducation}
           ></ResumeBuilderButton>
         </ButtonContainer>
       </ResumeBuilderForm>
@@ -196,16 +204,18 @@ export function ResumeBuilder({
                 )
               }
             ></DescriptionField>
+            {resumeData.experience.indexOf(exp) > 0 && (
+              <ResumeBuilderButton
+                label="Remove -"
+                onClick={() => removeExperience(exp.id)}
+              ></ResumeBuilderButton>
+            )}
           </FormFieldsContainer>
         ))}
         <ButtonContainer>
           <ResumeBuilderButton
             label="Add +"
-            onClick={() => console.log("Clicked")}
-          ></ResumeBuilderButton>
-          <ResumeBuilderButton
-            label="Remove -"
-            onClick={() => console.log("Clicked")}
+            onClick={addExperience}
           ></ResumeBuilderButton>
         </ButtonContainer>
       </ResumeBuilderForm>
@@ -220,16 +230,18 @@ export function ResumeBuilder({
                 onUpdateSkill(sk.id, Object.keys(sk)[1], e.target.value)
               }
             ></FormField>
+            {resumeData.skills.indexOf(sk) > 0 && (
+              <ResumeBuilderButton
+                label="Remove -"
+                onClick={() => removeSkill(sk.id)}
+              ></ResumeBuilderButton>
+            )}
           </FormFieldsContainer>
         ))}
         <ButtonContainer>
           <ResumeBuilderButton
             label="Add +"
-            onClick={() => console.log("Clicked")}
-          ></ResumeBuilderButton>
-          <ResumeBuilderButton
-            label="Remove -"
-            onClick={() => console.log("Clicked")}
+            onClick={addSkill}
           ></ResumeBuilderButton>
         </ButtonContainer>
       </ResumeBuilderForm>
