@@ -85,7 +85,7 @@ export function ResumeContainer() {
         onUpdatePersonal={updatePersonal}
         onUpdateEducation={updateEducation}
         onUpdateExperience={updateExperience}
-        onUpdateSkills={updateSkill}
+        onUpdateSkill={updateSkill}
       ></ResumeBuilder>
       <ResumePreviewContainer resumeData={resumeData}></ResumePreviewContainer>
     </div>
