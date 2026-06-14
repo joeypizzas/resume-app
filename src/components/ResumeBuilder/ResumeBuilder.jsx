@@ -210,20 +210,18 @@ export function ResumeBuilder({
         </ButtonContainer>
       </ResumeBuilderForm>
       <ResumeBuilderForm header="Skills">
-        <FormFieldsContainer>
-          <FormField
-            fieldHeader="Skill"
-            initialInput="Kneading dough"
-          ></FormField>
-          <FormField
-            fieldHeader="Skill"
-            initialInput="Tossin' pies"
-          ></FormField>
-          <FormField
-            fieldHeader="Skill"
-            initialInput="Operating pizza oven"
-          ></FormField>
-        </FormFieldsContainer>
+        {resumeData.skills.map((sk) => (
+          <FormFieldsContainer>
+            <FormField
+              key={sk.id}
+              fieldHeader={capitalize(Object.keys(sk)[1])}
+              value={sk.skill}
+              onChange={(e) =>
+                onUpdateSkill(sk.id, Object.keys(sk)[1], e.target.value)
+              }
+            ></FormField>
+          </FormFieldsContainer>
+        ))}
         <ButtonContainer>
           <ResumeBuilderButton
             label="Add +"
