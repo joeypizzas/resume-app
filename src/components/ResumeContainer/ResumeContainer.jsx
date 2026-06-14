@@ -36,8 +36,9 @@ export function ResumeContainer() {
         startDate: "08/2019",
         endDate: "04/2026",
         location: "New York, NY",
-        description:
+        description: [
           "Directly responsible for the creation of hundreds of delicious pizza pies each day.",
+        ],
       },
     ],
     skills: [
