@@ -15,12 +15,7 @@ function capitalize(str) {
 }
 
 function capitalizeAndSplit(str) {
-  const arr = [...str];
-  let newStr = "";
-  for (const c of arr) {
-    if (arr.indexOf(c) === 0) newStr += capitalize(c);
-    // finish fn
-  }
+  return str.replace(/([A-Z])/g, " $1").replace(/^./, (c) => c.toUpperCase());
 }
 
 function parseDate(str) {
@@ -100,14 +95,14 @@ export function ResumeBuilder({
               }
             ></FormField>
             <DatePickerField
-              fieldHeader={capitalize(Object.keys(edu)[3])}
+              fieldHeader={capitalizeAndSplit(Object.keys(edu)[3])}
               selected={parseDate(edu.startDate)}
               onChange={(date) =>
                 onUpdateEducation(edu.id, Object.keys(edu)[3], formatDate(date))
               }
             ></DatePickerField>
             <DatePickerField
-              fieldHeader={capitalize(Object.keys(edu)[4])}
+              fieldHeader={capitalizeAndSplit(Object.keys(edu)[4])}
               selected={parseDate(edu.endDate)}
               onChange={(date) =>
                 onUpdateEducation(edu.id, Object.keys(edu)[4], formatDate(date))
@@ -122,9 +117,13 @@ export function ResumeBuilder({
             ></FormField>
             <DescriptionField
               fieldHeader={capitalize(Object.keys(edu)[6])}
-              value={edu.description}
+              value={edu.description.join("\n")}
               onChange={(e) =>
-                onUpdateEducation(edu.id, Object.keys(edu)[6], e.target.value)
+                onUpdateEducation(
+                  edu.id,
+                  Object.keys(edu)[6],
+                  e.target.value.split("\n"),
+                )
               }
             ></DescriptionField>
           </FormFieldsContainer>
