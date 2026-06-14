@@ -78,6 +78,64 @@ export function ResumeContainer() {
       ),
     }));
 
+  const addEducation = () =>
+    setResumeData((prev) => ({
+      ...prev,
+      education: [
+        ...prev.education,
+        {
+          id: crypto.randomUUID(),
+          school: "",
+          degree: "",
+          startDate: "",
+          endDate: "",
+          location: "",
+          description: [],
+        },
+      ],
+    }));
+
+  const removeEducation = (id) =>
+    setResumeData((prev) => ({
+      ...prev,
+      education: prev.education.filter((edu) => edu.id !== id),
+    }));
+
+  const addExperience = () =>
+    setResumeData((prev) => ({
+      ...prev,
+      experience: [
+        ...prev.experience,
+        {
+          id: crypto.randomUUID(),
+          company: "",
+          position: "",
+          startDate: "",
+          endDate: "",
+          location: "",
+          description: [],
+        },
+      ],
+    }));
+
+  const removeExperience = (id) =>
+    setResumeData((prev) => ({
+      ...prev,
+      experience: prev.experience.filter((exp) => exp.id !== id),
+    }));
+
+  const addSkill = () =>
+    setResumeData((prev) => ({
+      ...prev,
+      skills: [...prev.skills, { id: crypto.randomUUID(), skill: "" }],
+    }));
+
+  const removeSkill = (id) =>
+    setResumeData((prev) => ({
+      ...prev,
+      skills: prev.skills.filter((sk) => sk.id !== id),
+    }));
+
   return (
     <div className="resume-container">
       <ResumeBuilder
@@ -86,6 +144,12 @@ export function ResumeContainer() {
         onUpdateEducation={updateEducation}
         onUpdateExperience={updateExperience}
         onUpdateSkill={updateSkill}
+        addEducation={addEducation}
+        removeEducation={removeEducation}
+        addExperience={addExperience}
+        removeExperience={removeExperience}
+        addSkill={addSkill}
+        removeSkill={removeSkill}
       ></ResumeBuilder>
       <ResumePreviewContainer resumeData={resumeData}></ResumePreviewContainer>
     </div>
