@@ -140,32 +140,64 @@ export function ResumeBuilder({
         </ButtonContainer>
       </ResumeBuilderForm>
       <ResumeBuilderForm header="Experience">
-        <FormFieldsContainer>
-          <FormField
-            fieldHeader="Company"
-            initialInput="Joey's Pizza Pies"
-          ></FormField>
-          <FormField
-            fieldHeader="Position"
-            initialInput="Head pie guy"
-          ></FormField>
-          <DatePickerField
-            fieldHeader="Start date"
-            initialDate="2019-09"
-          ></DatePickerField>
-          <DatePickerField
-            fieldHeader="End date"
-            initialDate="2026-05"
-          ></DatePickerField>
-          <FormField
-            fieldHeader="Location"
-            initialInput="New York, NY"
-          ></FormField>
-          <DescriptionField
-            fieldHeader="Description"
-            initialInput="Directly responsible for the creation of hundreds of delicious pizza pies each day."
-          ></DescriptionField>
-        </FormFieldsContainer>
+        {resumeData.experience.map((exp) => (
+          <FormFieldsContainer key={exp.id}>
+            <FormField
+              fieldHeader={capitalize(Object.keys(exp)[1])}
+              value={exp.company}
+              onChange={(e) =>
+                onUpdateExperience(exp.id, Object.keys(exp)[1], e.target.value)
+              }
+            ></FormField>
+            <FormField
+              fieldHeader={capitalize(Object.keys(exp)[2])}
+              value={exp.position}
+              onChange={(e) =>
+                onUpdateExperience(exp.id, Object.keys(exp)[2], e.target.value)
+              }
+            ></FormField>
+            <DatePickerField
+              fieldHeader={capitalizeAndSplit(Object.keys(exp)[3])}
+              selected={parseDate(exp.startDate)}
+              onChange={(date) =>
+                onUpdateExperience(
+                  exp.id,
+                  Object.keys(exp)[3],
+                  formatDate(date),
+                )
+              }
+            ></DatePickerField>
+            <DatePickerField
+              fieldHeader={capitalizeAndSplit(Object.keys(exp)[4])}
+              selected={parseDate(exp.endDate)}
+              onChange={(date) =>
+                onUpdateExperience(
+                  exp.id,
+                  Object.keys(exp)[4],
+                  formatDate(date),
+                )
+              }
+            ></DatePickerField>
+            <FormField
+              fieldHeader={capitalize(Object.keys(exp)[5])}
+              value={exp.location}
+              onChange={(e) =>
+                onUpdateExperience(exp.id, Object.keys(exp)[5], e.target.value)
+              }
+            ></FormField>
+            <DescriptionField
+              fieldHeader={capitalize(Object.keys(exp)[6])}
+              value={exp.description.join("\n")}
+              onChange={(e) =>
+                onUpdateExperience(
+                  exp.id,
+                  Object.keys(exp)[6],
+                  e.target.value.split("\n"),
+                )
+              }
+            ></DescriptionField>
+          </FormFieldsContainer>
+        ))}
         <ButtonContainer>
           <ResumeBuilderButton
             label="Add +"
