@@ -18,33 +18,34 @@ export function ResumePreview({ resumeData }) {
       ></PreviewHeader>
       <PreviewSection sectionName="SKILLS">
         <SkillsContainer>
-          <Skill skillName="Kneading dough"></Skill>
-          <Skill skillName="Tossin' Pies"></Skill>
-          <Skill skillName="Operating pizza oven"></Skill>
+          {resumeData.skills.map((sk) => (
+            <Skill skillName={sk.skill}></Skill>
+          ))}
         </SkillsContainer>
       </PreviewSection>
       <PreviewSection sectionName="EXPERIENCE">
-        <PreviewItem
-          organization="Joey's Pizza Pies,"
-          location="New York, NY"
-          startDate="08/2019"
-          endDate=" 04/2026"
-          positionOrStudy="Head pie guy"
-          description="- Directly responsible for the creation of hundreds of delicious pizza pies each day."
-        ></PreviewItem>
+        {resumeData.experience.map((exp) => (
+          <PreviewItem
+            organization={exp.company}
+            location={exp.location}
+            startDate={exp.startDate}
+            endDate={exp.endDate}
+            positionOrStudy={exp.position}
+            description={exp.description} // fix description display
+          ></PreviewItem>
+        ))}
       </PreviewSection>
       <PreviewSection sectionName="EDUCATION">
-        <PreviewItem
-          organization="International Academy of Pizza Pies,"
-          location="Naples, IT"
-          startDate="09/2015"
-          endDate="05/2019"
-          positionOrStudy="BS, Pizza Pie Sciences"
-          description="
-            - Golden hands winner in tossin' pies competition (2019)
-            - Pepperoni crown holder (2018)
-            - University Honors (2018-2019)"
-        ></PreviewItem>
+        {resumeData.education.map((edu) => (
+          <PreviewItem
+            organization={edu.school}
+            location={edu.location}
+            startDate={edu.startDate}
+            endDate={edu.endDate}
+            positionOrStudy={edu.degree}
+            description={edu.description} // fix description display
+          ></PreviewItem>
+        ))}
       </PreviewSection>
     </div>
   );
