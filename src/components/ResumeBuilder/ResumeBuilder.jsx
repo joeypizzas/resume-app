@@ -132,20 +132,26 @@ export function ResumeBuilder({
                 )
               }
             ></DescriptionField>
-            {resumeData.education.indexOf(edu) > 0 && (
-              <ResumeBuilderButton
-                label="Remove -"
-                onClick={() => removeEducation(edu.id)}
-              ></ResumeBuilderButton>
-            )}
+            {(() => {
+              const index = resumeData.education.indexOf(edu);
+              const isLast = index === resumeData.education.length - 1;
+
+              return (
+                <ButtonContainer>
+                  {isLast && (
+                    <ResumeBuilderButton label="Add +" onClick={addEducation} />
+                  )}
+                  {index > 0 && (
+                    <ResumeBuilderButton
+                      label="Remove -"
+                      onClick={() => removeEducation(edu.id)}
+                    />
+                  )}
+                </ButtonContainer>
+              );
+            })()}
           </FormFieldsContainer>
         ))}
-        <ButtonContainer>
-          <ResumeBuilderButton
-            label="Add +"
-            onClick={addEducation}
-          ></ResumeBuilderButton>
-        </ButtonContainer>
       </ResumeBuilderForm>
       <ResumeBuilderForm header="Experience">
         {resumeData.experience.map((exp) => (
@@ -205,10 +211,8 @@ export function ResumeBuilder({
               }
             ></DescriptionField>
             {(() => {
-              // Fix so only show add on last item, and remove for any item after 1
-              const isLast =
-                resumeData.experience.indexOf(exp) ===
-                resumeData.experience.length - 1;
+              const index = resumeData.experience.indexOf(exp);
+              const isLast = index === resumeData.experience.length - 1;
 
               return (
                 <ButtonContainer>
@@ -218,10 +222,12 @@ export function ResumeBuilder({
                       onClick={addExperience}
                     />
                   )}
-                  <ResumeBuilderButton
-                    label="Remove -"
-                    onClick={() => removeExperience(exp.id)}
-                  />
+                  {index > 0 && (
+                    <ResumeBuilderButton
+                      label="Remove -"
+                      onClick={() => removeExperience(exp.id)}
+                    />
+                  )}
                 </ButtonContainer>
               );
             })()}
@@ -239,20 +245,26 @@ export function ResumeBuilder({
                 onUpdateSkill(sk.id, Object.keys(sk)[1], e.target.value)
               }
             ></FormField>
-            {resumeData.skills.indexOf(sk) > 0 && (
-              <ResumeBuilderButton
-                label="Remove -"
-                onClick={() => removeSkill(sk.id)}
-              ></ResumeBuilderButton>
-            )}
+            {(() => {
+              const index = resumeData.skills.indexOf(sk);
+              const isLast = index === resumeData.skills.length - 1;
+
+              return (
+                <ButtonContainer>
+                  {isLast && (
+                    <ResumeBuilderButton label="Add +" onClick={addSkill} />
+                  )}
+                  {index > 0 && (
+                    <ResumeBuilderButton
+                      label="Remove -"
+                      onClick={() => removeSkill(sk.id)}
+                    />
+                  )}
+                </ButtonContainer>
+              );
+            })()}
           </FormFieldsContainer>
         ))}
-        <ButtonContainer>
-          <ResumeBuilderButton
-            label="Add +"
-            onClick={addSkill}
-          ></ResumeBuilderButton>
-        </ButtonContainer>
       </ResumeBuilderForm>
     </div>
   );
