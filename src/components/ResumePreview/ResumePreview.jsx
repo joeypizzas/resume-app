@@ -31,7 +31,7 @@ export function ResumePreview({ resumeData }) {
             startDate={exp.startDate}
             endDate={exp.endDate}
             positionOrStudy={exp.position}
-            description={exp.description} // fix description display
+            description={exp.description.join("\n")}
           ></PreviewItem>
         ))}
       </PreviewSection>
@@ -43,7 +43,7 @@ export function ResumePreview({ resumeData }) {
             startDate={edu.startDate}
             endDate={edu.endDate}
             positionOrStudy={edu.degree}
-            description={edu.description} // fix description display
+            description={edu.description.join("\n")}
           ></PreviewItem>
         ))}
       </PreviewSection>
