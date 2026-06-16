@@ -7,3 +7,9 @@
   overflow-y: auto;
   width: 75%;
 }
+
+@media (max-width: 768px) {
+  .resume-preview-container {
+    width: 100%;
+  }
+}

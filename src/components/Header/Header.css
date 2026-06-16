@@ -9,3 +9,9 @@
   background-color: var(--color-navy);
   color: var(--color-bg);
 }
+
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+  }
+}

@@ -9,3 +9,9 @@
   overflow-y: auto;
   width: 25%;
 }
+
+@media (max-width: 768px) {
+  .resume-builder {
+    width: 100%;
+  }
+}

@@ -20,3 +20,9 @@ a {
 a:hover {
   color: var(--color-blue);
 }
+
+@media (max-width: 768px) {
+  .footer {
+    width: 100%;
+  }
+}
