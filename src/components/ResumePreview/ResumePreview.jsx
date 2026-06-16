@@ -19,13 +19,14 @@ export function ResumePreview({ resumeData }) {
       <PreviewSection sectionName="SKILLS">
         <SkillsContainer>
           {resumeData.skills.map((sk) => (
-            <Skill skillName={sk.skill}></Skill>
+            <Skill key={sk.id} skillName={sk.skill}></Skill>
           ))}
         </SkillsContainer>
       </PreviewSection>
       <PreviewSection sectionName="EXPERIENCE">
         {resumeData.experience.map((exp) => (
           <PreviewItem
+            key={exp.id}
             organization={exp.company}
             location={exp.location}
             startDate={exp.startDate}
@@ -38,6 +39,7 @@ export function ResumePreview({ resumeData }) {
       <PreviewSection sectionName="EDUCATION">
         {resumeData.education.map((edu) => (
           <PreviewItem
+            key={edu.id}
             organization={edu.school}
             location={edu.location}
             startDate={edu.startDate}
