@@ -158,9 +158,3 @@
 - Build app component by component in JSX. Initially with entirely hardcoded values.
 - Once component is built with hardcoded values, then pass down hardcoded props.
 - Once all components are built with hardcoded props, then refactor to add in state.
-
-## Items to cleanup
-
-- Update favicon
-- responsiveness media queries
-- Add option to download docx
