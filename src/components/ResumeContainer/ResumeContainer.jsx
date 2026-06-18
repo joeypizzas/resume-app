@@ -5,7 +5,7 @@ import { useState } from "react";
 import { ResumeBuilder } from "../ResumeBuilder/ResumeBuilder.jsx";
 import { ResumePreviewContainer } from "../ResumePreviewContainer/ResumePreviewContainer.jsx";
 
-export function ResumeContainer() {
+export function ResumeContainer({ previewRef }) {
   const [resumeData, setResumeData] = useState({
     personal: {
       name: "Joey Pizzas",
@@ -151,7 +151,10 @@ export function ResumeContainer() {
         addSkill={addSkill}
         removeSkill={removeSkill}
       ></ResumeBuilder>
-      <ResumePreviewContainer resumeData={resumeData}></ResumePreviewContainer>
+      <ResumePreviewContainer
+        resumeData={resumeData}
+        previewRef={previewRef}
+      ></ResumePreviewContainer>
     </div>
   );
 }

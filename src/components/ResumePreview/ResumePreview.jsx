@@ -7,9 +7,9 @@ import { SkillsContainer } from "../SkillsContainer/SkillsContainer.jsx";
 import { Skill } from "../Skill/Skill.jsx";
 import { PreviewItem } from "../PreviewItem/PreviewItem.jsx";
 
-export function ResumePreview({ resumeData }) {
+export function ResumePreview({ resumeData, previewRef }) {
   return (
-    <div className="resume-preview">
+    <div className="resume-preview" ref={previewRef}>
       <PreviewHeader
         location={resumeData.personal.location}
         name={resumeData.personal.name}

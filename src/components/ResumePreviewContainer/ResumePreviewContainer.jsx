@@ -3,10 +3,13 @@
 import "./ResumePreviewContainer.css";
 import { ResumePreview } from "../ResumePreview/ResumePreview.jsx";
 
-export function ResumePreviewContainer({ resumeData }) {
+export function ResumePreviewContainer({ resumeData, previewRef }) {
   return (
     <div className="resume-preview-container">
-      <ResumePreview resumeData={resumeData}></ResumePreview>
+      <ResumePreview
+        resumeData={resumeData}
+        previewRef={previewRef}
+      ></ResumePreview>
     </div>
   );
 }
